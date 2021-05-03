@@ -147,8 +147,11 @@ func main() {
 	}
 
 	cDrawer.DrawString(*date)
-	cDrawer.DrawString(" | ")
-	cDrawer.DrawString(*readingtime)
+
+	if *readingtime != "" {
+		cDrawer.DrawString(" | ")
+		cDrawer.DrawString(*readingtime)
+	}
 
 	png.Encode(outFile, output)
 
