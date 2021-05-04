@@ -35,8 +35,10 @@ var (
 	readingtime = flag.String("readtime", "4 min read", "Reading time text")
 	out         = flag.String("out", "out.png", "Name of the output file")
 	dpi         = flag.Float64("dpi", 72, "screen resolution in dots per inch")
-	tfont       = flag.String("tfont", "Montserrat-ExtraBold.ttf", "Font to use for the title")
-	cfont       = flag.String("cfont", "Montserrat-SemiBold.ttf", "Font to use for the content (description and date)")
+
+	// TODO: use the fonts provided
+	tfont = flag.String("tfont", "Montserrat-ExtraBold.ttf", "Font to use for the title")
+	cfont = flag.String("cfont", "Montserrat-SemiBold.ttf", "Font to use for the content (description and date)")
 )
 
 var (
