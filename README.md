@@ -33,6 +33,9 @@ go get github.com/siddhantk232/og-image-generator
 Run `og-image-generator` with no args and it will generate a sample png file
 named `out.png` in the current directory.
 
+This is intended to be used as a git hook. See the [`sample-git-hook.sh`](sample-git-hook.sh) 
+for an example.
+
 ### Options
 
 `-title`

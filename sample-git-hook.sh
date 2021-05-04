@@ -2,6 +2,16 @@
 
 # This is a simple shell script that demonsrtates the use of og-image-generator.
 # This script could be run in a git hook to generate og-images
+# This specific example assumes that this script is running as pre-commit
+
+# To use this:
+# rename this to "pre-commit"
+# make it executable
+# mv it to your .git/hooks/ folder
+
+# To see more examples of git hooks:
+# see https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+# sample hooks in your repo's .git/hooks folder
 
 # All files in this folder are markdown files with yaml frontmatter
 # The yaml frontmatter contains information like title, description and date
@@ -28,3 +38,5 @@ do
   echo "==============================================================="
 done
 
+# add new changes
+git add
