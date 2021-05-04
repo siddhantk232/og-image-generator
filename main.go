@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	_ "embed"
 	"flag"
 	"image"
@@ -21,6 +22,9 @@ var titleFontFile []byte
 
 //go:embed Montserrat-SemiBold.ttf
 var contentFontFile []byte
+
+//go:embed blue.png
+var background []byte
 
 var (
 	width       = 1200
@@ -64,10 +68,7 @@ func main() {
 		return
 	}
 
-	f, _ := os.Open("blue.png")
-	defer f.Close()
-
-	bg, _, _ := image.Decode(f)
+	bg, _, _ := image.Decode(bytes.NewReader(background))
 
 	output := image.NewRGBA(image.Rect(0, 0, width, height))
 
